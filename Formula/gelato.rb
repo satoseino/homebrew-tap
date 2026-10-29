@@ -5,13 +5,13 @@
 class Gelato < Formula
   desc "Secret scanner for git repositories, compatible with tartufo config."
   homepage "https://github.com/satoseino/gelato"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/satoseino/gelato/releases/download/v0.1.0/gelato_0.1.0_darwin_amd64.tar.gz"
-      sha256 "a9c0df07db2ef7b7c0f67efd85b51fe4396679a59b4bc045d4790758671d9a5e"
+      url "https://github.com/satoseino/gelato/releases/download/v0.2.0/gelato_0.2.0_darwin_amd64.tar.gz"
+      sha256 "e9f8945c0842051a5bf0497e6235f5e6a869c2e964d8049fbaad06f4a98fca97"
 
       define_method(:install) do
         bin.install "gelato"
@@ -19,8 +19,8 @@ class Gelato < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/satoseino/gelato/releases/download/v0.1.0/gelato_0.1.0_darwin_arm64.tar.gz"
-      sha256 "2eab63752c64e98bda88c09c143fcf7a12e3a96625c842463d17358168b97533"
+      url "https://github.com/satoseino/gelato/releases/download/v0.2.0/gelato_0.2.0_darwin_arm64.tar.gz"
+      sha256 "f3f1839ddd416263af7441c606b6e3b7102809ce635a37f1ee69596e513b591c"
 
       define_method(:install) do
         bin.install "gelato"
@@ -31,16 +31,16 @@ class Gelato < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/satoseino/gelato/releases/download/v0.1.0/gelato_0.1.0_linux_amd64.tar.gz"
-      sha256 "bc52813dcef9897c8b1f01e30eaec3d63a7fd32495502a12012d4900bc5b77e3"
+      url "https://github.com/satoseino/gelato/releases/download/v0.2.0/gelato_0.2.0_linux_amd64.tar.gz"
+      sha256 "9579d89b937bfd35fccff5ce679cd2e4addb512804de5faa6933b1c054a3c2fa"
       define_method(:install) do
         bin.install "gelato"
         prefix.install "THIRD_PARTY_LICENSES"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/satoseino/gelato/releases/download/v0.1.0/gelato_0.1.0_linux_arm64.tar.gz"
-      sha256 "593d885ec696e22e241443f01a63ddf955c57e651d94a3a47f70181c0c2cd7a1"
+      url "https://github.com/satoseino/gelato/releases/download/v0.2.0/gelato_0.2.0_linux_arm64.tar.gz"
+      sha256 "15f9052e9c712c9f5b6c22b40dde3f6d24489fc97d1f38e50798b90d71e0565f"
       define_method(:install) do
         bin.install "gelato"
         prefix.install "THIRD_PARTY_LICENSES"
